@@ -42,7 +42,7 @@ export default function Hero() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Our latest&nbsp;
+            Start&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -52,7 +52,7 @@ export default function Hero() {
                   theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
               }}
             >
-              products
+              Recording.....
             </Typography>
           </Typography>
           <Typography
@@ -60,9 +60,10 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
+            {/* Explore our cutting-edge dashboard, delivering high-quality solutions
             tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            and services. */}
+            click on the below icon to start the recording
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}

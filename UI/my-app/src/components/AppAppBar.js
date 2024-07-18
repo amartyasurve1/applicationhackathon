@@ -28,19 +28,19 @@ function AppAppBar({ mode, toggleColorMode }) {
     setOpen(newOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: "smooth" });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: "smooth",
-      });
-      setOpen(false);
-    }
-  };
+//   const scrollToSection = (sectionId) => {
+//     const sectionElement = document.getElementById(sectionId);
+//     const offset = 128;
+//     if (sectionElement) {
+//       const targetScroll = sectionElement.offsetTop - offset;
+//       sectionElement.scrollIntoView({ behavior: "smooth" });
+//       window.scrollTo({
+//         top: targetScroll,
+//         behavior: "smooth",
+//       });
+//       setOpen(false);
+//     }
+//   };
 
   return (
     <div>
@@ -93,7 +93,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 alt="logo of sitemark"
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => scrollToSection("features")}
                   sx={{ py: "6px", px: "12px" }}
                 >
@@ -132,6 +132,14 @@ function AppAppBar({ mode, toggleColorMode }) {
                   <Typography variant="body2" color="text.primary">
                     FAQ
                   </Typography>
+                </MenuItem> */}
+                <MenuItem
+                  onClick={() => navigate("/report")}
+                  sx={{ py: "6px", px: "12px" }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    Reports
+                  </Typography>
                 </MenuItem>
               </Box>
             </Box>
@@ -143,7 +151,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               }}
             >
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-              <Button
+              {/* <Button
                 color="primary"
                 variant="text"
                 size="small"
@@ -162,7 +170,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 target="_blank"
               >
                 Sign up
-              </Button>
+              </Button> */}
             </Box>
             <Box sx={{ display: { sm: "", md: "none" } }}>
               <Button
