@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+// import LandingPage from "./pages/LandingPage";
+import Home from "./pages/LandingPage";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={<Home />} exact={true}></Route>
+          <Route path={"/report"} element={<Home />} exact={true}></Route>
+          <Route path={"/landingpage"} element={<LandingPage />} exact={true}></Route>
+        </Routes>
+      </BrowserRouter>
+    
+    </Box>
+
   );
 }
 
